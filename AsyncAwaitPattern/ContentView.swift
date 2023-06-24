@@ -7,15 +7,20 @@
 
 import SwiftUI
 
+class ContentViewModel: ObservableObject {
+    let url = "https://api.letsbuildthatapp.com/jsondecodable/courses"
+}
+
+
 struct ContentView: View {
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            ScrollView {
+                Text("Here is my content")
+            }
+            .navigationTitle("Courses")
         }
-        .padding()
     }
 }
 
